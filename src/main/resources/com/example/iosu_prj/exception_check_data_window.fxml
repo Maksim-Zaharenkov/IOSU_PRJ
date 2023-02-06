@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iosu_prj.windowsController.ExceptionCheckDataWinController">
+   <children>
+      <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="24.0" prefWidth="250.0" style="-fx-background-color: #3D4956;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="30.0" layoutY="55.0" prefHeight="176.0" prefWidth="56.0" style="-fx-background-color: #3D4956;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="okBtn" layoutX="399.0" layoutY="232.0" mnemonicParsing="false" onAction="#ok" prefHeight="40.0" prefWidth="80.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="ОК" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Text fill="#3d4956" layoutX="158.0" layoutY="95.0283203125" strokeType="OUTSIDE" strokeWidth="0.0" text="Проверьте правильность и полноту введенных вами данных!" wrappingWidth="267.9999145507811" AnchorPane.leftAnchor="158.0" AnchorPane.topAnchor="81.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fill="#8c97a4" glyphName="EXCLAMATION_CIRCLE" layoutX="80.0" layoutY="126.0" selectionFill="#3d4956" size="75" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="61.71428680419922" />
+   </children>
+</AnchorPane>

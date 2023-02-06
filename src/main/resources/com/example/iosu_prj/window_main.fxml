@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.iosu_prj.windowsController.MainWinController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #3D4956;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="110.0" prefWidth="200.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="55.0" layoutY="53.0" size="40.0" />
+                  <Label layoutX="35.0" layoutY="70.0" text="DatabaseSystem" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MIXCLOUD" layoutX="77.0" layoutY="74.0" size="50.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="MEETUP" layoutX="119.0" layoutY="31.0" size="20.0" />
+               </children>
+            </Pane>
+            <Button fx:id="buttonLoadFileMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickButtonLoadFileMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Загрузить файл" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonTimetableMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickButtonTimetableMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Расписание" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonResultsMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickButtonResultsMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Результаты" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLIPBOARD" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonProtocolsMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#clickButtonProtocolsMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Протоколы" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FOLDER_OPEN" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonFullPackageMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickButtonFullPackageMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Полный пакет" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonArchiveMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" onAction="#clickButtonArchiveMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Архив" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="buttonTrashCanMainPanel" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickButtonTrashCanMainPanel" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../../CSS/ButtonStyle.css" text="Корзина" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <GridPane fx:id="paneTimetableFirst" layoutX="297.0" layoutY="191.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="245.59998168945313" minHeight="10.0" prefHeight="97.80000610351561" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="245.59998168945313" minHeight="10.0" prefHeight="15.800012207031244" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="387.79998779296875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="buttonNewTimetablePaneTimetableFirst" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonNewTimetablePaneTimetableFirst" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Новое расписание" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="250.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="buttonLoadTimetablePaneTimetableFirst" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonLoadTimetablePaneTimetableFirst" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Загрузить расписание" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="250.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+            <AnchorPane fx:id="paneChooseTimetablePaneTimetableFirst" layoutX="10.0" layoutY="122.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Text fill="WHITE" layoutX="174.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите необходимое расписание:" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="listViewChooseTimetablePaneTimetableFirst" layoutX="103.0" layoutY="39.0" prefHeight="262.0" prefWidth="560.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0" />
+                  <Button fx:id="buttonConfirmChooseTimetablePaneTimetableFirst" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonConfirmChooseTimetablePaneTimetableFirst" prefHeight="30.0" prefWidth="120.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Выбрать →" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonDeleteTimetablePaneTimetableFirst" layoutX="356.0" layoutY="317.0" mnemonicParsing="false" onAction="#clickButtonDeleteTimetablePaneTimetableFirst" prefHeight="30.0" prefWidth="80.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="200.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneNewTimetablePaneTimetableFirst" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите начальную дату:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="datePickerPaneNewTimetablePaneTimetableFirst" stylesheets="@../../../CSS/DatePickerStyle.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите количество студентов, принимаемых в день:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textViewCountStudentsInDayPaneNewTimetablePaneTimetableFirst" maxWidth="50.0" prefHeight="26.0" prefWidth="50.0" stylesheets="@../../../CSS/TextFieldStyle.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="110.0" />
+                  <Text fill="WHITE" layoutX="426.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Суббота:" AnchorPane.leftAnchor="426.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="choiceBoxSaturdayPaneNewTimetablePaneTimetableFirst" layoutX="381.0" layoutY="50.0" prefWidth="150.0" stylesheets="@../../../CSS/ChoiceBoxStyle.css" AnchorPane.leftAnchor="381.0" AnchorPane.topAnchor="40.0" />
+                  <Text fx:id="tvGroups" fill="WHITE" layoutX="20.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите необходимые группы в порядке их приоритета:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="150.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="listViewChooseGroupPaneNewTimetablePaneTimetableFirst" layoutX="19.0" layoutY="194.0" prefHeight="88.0" prefWidth="394.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="119.19999999999999" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="185.60000000000002" AnchorPane.topAnchor="180.0" />
+                  <Text fx:id="textSelectedGroupsHelperPaneNewTimetablePaneTimetableFirst" fill="WHITE" layoutX="20.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выбранные группы:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="buttonOkNewTimetablePaneNewTimetablePaneTimetableFirst" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonOkNewTimetablePaneNewTimetablePaneTimetableFirst" prefHeight="30.0" prefWidth="70.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Ок →" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="paneNotInfoPaneTimetableFirst" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #444E58;" />
+                  <Pane prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #505C68;" />
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #444E58;" />
+                  <Pane layoutX="10.0" layoutY="110.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #505C68;" />
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #444E58;" />
+                  <Pane layoutX="10.0" layoutY="220.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #505C68;" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneEditTimetableSecond" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="387.19999542236326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.00000762939453" minHeight="10.0" prefHeight="14.400004577636764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="98.99999237060547" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите операцию:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="buttonShowTimetablePaneEditTimetableSecond" alignment="CENTER" layoutX="160.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickButtonShowTimetablePaneEditTimetableSecond" prefHeight="40.0" prefWidth="300.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Посмотреть расписание" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonSwapStudentsInTimetablePaneEditTimetableSecond" alignment="CENTER" layoutX="235.0" layoutY="151.0" mnemonicParsing="false" onAction="#clickButtonSwapStudentsInTimetablePaneEditTimetableSecond" prefHeight="40.0" prefWidth="300.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Поменять студентов местами" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonMoveStudentInTimetablePaneEditTimetableSecond" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonMoveStudentInTimetablePaneEditTimetableSecond" prefHeight="40.0" prefWidth="300.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Переместить студента в другой день" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonDeleteStudentInArchiveFromTimetablePaneEditTimetableSecond" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonDeleteStudentInArchiveFromTimetablePaneEditTimetableSecond" prefHeight="40.0" prefWidth="300.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить студента в архив" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonSkipEditTimetablePaneEditTimetableSecond" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonSkipEditTimetablePaneEditTimetableSecond" prefHeight="30.0" prefWidth="120.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="К генерации →" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonBackToChooseTimetablePaneEditTimetableSecond" layoutX="356.0" layoutY="317.0" mnemonicParsing="false" onAction="#clickButtonBackToChooseTimetablePaneEditTimetableSecond" prefHeight="30.0" prefWidth="80.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="← Назад" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="200.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneShowTimetable" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="387.19999542236326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.00000762939453" minHeight="10.0" prefHeight="14.400004577636764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="98.99999237060547" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Просмотр расписания:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ListView fx:id="listViewShowTimetablePaneShowTimetable" prefHeight="320.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewSelection.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonOkPaneShowTimetable" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonOkShowTimetable" prefHeight="30.0" prefWidth="100.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="← Ок" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonSortPaneShowTimetable" layoutX="68.0" layoutY="29.0" mnemonicParsing="false" onAction="#clickButtonSortShowTimetable" prefHeight="30.0" prefWidth="34.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="68.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneSwapStudentsDayOne" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите день, где находится заменяемый студент:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewSwapStudentsDayOnePaneSwapStudentsDayOne" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneSwapStudentsIndexOne" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите студента, которого необходимо заменить:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewSwapStudentsIndexOnePaneSwapStudentsIndexOne" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneSwapStudentsDayTwo" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите день, где находится студент на замену:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewSwapStudentsDayTwoPaneSwapStudentsDayTwo" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneSwapStudentsIndexTwo" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите студента, на которого будет произведена замена:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewSwapStudentsIndexTwoPaneSwapStudentsIndexTwo" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneSelectDayToDeleteStudentInArchive" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите день, из которого необходимо исключить студента:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewSelectDayToDeleteStudentInArchivePaneSelectDayToDeleteStudentInArchive" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneDeleteStudentInArchive" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите студента, которого необходимо удалить:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewDeleteStudentInArchivePaneDeleteStudentInArchive" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneMoveStudentFromDay" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите день, из которого нужно переместить студента:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewMoveStudentFromDayPaneMoveStudentFromDay" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneMoveStudentGetIndex" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите студента, которого необходимо переместить в другой день:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewMoveStudentGetIndexPaneMoveStudentGetIndex" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneMoveStudentToDay" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="56.000003051757815" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="450.40000305175784" minHeight="10.0" prefHeight="444.7999969482422" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите день, в который нужно переместить студента:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="1">
+               <children>
+                  <ListView fx:id="listViewMoveStudentToDayPaneMoveStudentToDay" layoutX="93.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneGenerateAllThird" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="387.19999542236326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.00000762939453" minHeight="10.0" prefHeight="14.400004577636764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="98.99999237060547" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonGenerateAllPaneGenerateAllThird" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonGenerateAllPaneGenerateAllThird" prefHeight="30.0" prefWidth="195.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Сгенерировать" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonBackToOperationsPaneGenerateAllThird" layoutX="356.0" layoutY="317.0" mnemonicParsing="false" onAction="#clickButtonBackToOperationsPaneGenerateAllThird" prefHeight="30.0" prefWidth="158.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="← Назад к операциям" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="280.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="paneInfoForProtocolPaneGenerateAllThird" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #444E58;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите председателя комиссии:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="textFieldHeadOfTheCommissionPaneAdditionalInfoProtocolsThird" promptText="Нифагин Владимир Александрович" stylesheets="@../../../CSS/TextFieldStyle.css">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="160.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите членов комиссии:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextArea fx:id="textAreaCommissionPaneAdditionalInfoProtocolsThird" layoutX="60.0" layoutY="71.0" prefHeight="70.0" prefWidth="200.0" promptText="Охрименко А. А., Маковский А. Л., Чумаков О. А., Чайков М. А., Русак Л. В., Сульжиц И. А., Стасевич Н. А., Заровский Д. И." stylesheets="@../../../CSS/TextAreaStyle.css" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Text fill="WHITE" layoutX="216.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите начальную дату второго расписания:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <DatePicker fx:id="datePickerPaneInfoForProtocolPaneGenerateAllThird" stylesheets="@../../../CSS/DatePickerStyle.css">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <StackPane maxWidth="-Infinity">
+                     <children>
+                        <Text fx:id="textSecretaryFullPackage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите секретаря комиссии:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="300.0" />
+                           </StackPane.margin>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите папку для сохранения:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="250.0" />
+                           </StackPane.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </StackPane>
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="textFieldGetSaveFolderPathPaneAdditionalInfoProtocolsThird" editable="false" layoutX="14.0" layoutY="16.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../../../CSS/TextFieldStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="buttonGetSaveFolderPathPaneAdditionalInfoProtocolsThird" layoutX="152.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickButtonGetSaveFolderPathPaneAdditionalInfoProtocolsThird" prefHeight="30.0" prefWidth="50.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="..." textFill="WHITE" AnchorPane.leftAnchor="187.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="textFieldSecretaryOfTheCommissionPaneAdditionalInfoProtocolsThirdFullRez" layoutX="33.0" layoutY="21.0" prefHeight="26.0" prefWidth="175.0" promptText="Крупская М. А." stylesheets="@../../../CSS/TextFieldStyle.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox fx:id="paneForOtherPaneGenerateAllThird" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #444E58;">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите начальную дату второго расписания:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <DatePicker fx:id="datePickerPaneForOtherPaneGenerateAllThird" stylesheets="@../../../CSS/DatePickerStyle.css">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <Text fill="WHITE" layoutX="216.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите папку для сохранения:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <StackPane prefHeight="50.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="15.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="textFieldGetSaveFolderPathPaneForOtherPaneGenerateAllThird" editable="false" maxWidth="190.0" prefHeight="30.0" prefWidth="190.0" stylesheets="@../../../CSS/TextFieldStyle.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="50.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <Button fx:id="buttonGetSaveFolderPathPaneForOtherPaneGenerateAllThird" mnemonicParsing="false" onAction="#clickButtonGetSaveFolderPathPaneForOtherPaneGenerateAllThird" prefHeight="30.0" prefWidth="50.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="..." textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="185.0" />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <Text fx:id="textHeadRez" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите председателя комиссии:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="textFieldHeadOfTheCommissionPaneAdditionalInfoProtocolsThirdRez" promptText="Нифагин Владимир Александрович" stylesheets="@../../../CSS/TextFieldStyle.css">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fx:id="textSecretaryRez" fill="WHITE" layoutX="193.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите секретаря комиссии:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="textFieldSecretaryOfTheCommissionPaneAdditionalInfoProtocolsThirdRez" layoutX="80.0" layoutY="104.0" maxWidth="-Infinity" prefWidth="300.0" promptText="Крупская М. А." stylesheets="@../../../CSS/TextFieldStyle.css">
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <StackPane fx:id="paneSuccessGeneration" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Генерация прошла успешно!">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="50.0" />
+               </StackPane.margin>
+            </Text>
+            <FontAwesomeIconView fill="WHITE" glyphName="CIRCLE" layoutX="90.0" layoutY="268.0" size="70" wrappingWidth="50.0">
+               <StackPane.margin>
+                  <Insets right="390.0" />
+               </StackPane.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#444e58" glyphName="CHECK" size="50" wrappingWidth="50.0">
+               <StackPane.margin>
+                  <Insets right="380.0" />
+               </StackPane.margin>
+            </FontAwesomeIconView>
+         </children>
+      </StackPane>
+      <GridPane fx:id="paneArchiveStudentSecond" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="387.19999542236326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.00000762939453" minHeight="10.0" prefHeight="14.400004577636764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="98.99999237060547" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите студента, которого необходимо вернуть из архива:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ListView fx:id="listViewChooseStudentToArchivationPaneArchivationStudentSecond" prefHeight="320.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewSelection.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonConfirmArchivationPaneArchivationStudentSecond" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonConfirmArchivationPaneArchivation" prefHeight="30.0" prefWidth="195.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Разархивировать" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneTrashCan" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="355.99996490478514" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="355.99996490478514" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="355.99996490478514" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="431.00001068115233" minHeight="10.0" prefHeight="142.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="194.0" prefWidth="600.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите операцию:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="buttonDeleteStudentPaneTrashCan" alignment="CENTER" layoutX="225.0" layoutY="40.0" mnemonicParsing="false" onAction="#clickButtonDeleteStudentPaneTrashCan" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить студента" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="200.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="buttonDeleteTeacherPaneTrashCan" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonDeleteTeacherPaneTrashCan" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить преподавателя" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="200.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonDeleteGroupPaneTrashCan" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonDeleteGroupPaneTrashCan" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить группу" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="400.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="buttonDeleteAllStudentsPaneTrashCan" alignment="CENTER" layoutX="125.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickButtonDeleteAllStudentsPaneTrashCan" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить всех студентов" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="400.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="buttonDeleteAllTeachersPaneTrashCan" alignment="CENTER" layoutX="125.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickButtonDeleteAllTeachersPaneTrashCan" prefHeight="40.0" prefWidth="201.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить всех преподавателей" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="4" />
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="buttonDeleteAllPaneTrashCan" alignment="CENTER" mnemonicParsing="false" onAction="#clickButtonDeleteAllPaneTrashCan" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Очистить БД" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="paneChooseToDeleteSecond" layoutX="210.0" layoutY="10.0" prefHeight="214.0" prefWidth="373.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="389.60001983642576" minHeight="10.0" prefHeight="387.19999542236326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="303.00000762939453" minHeight="10.0" prefHeight="14.400004577636764" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="389.3999938964844" minHeight="10.0" prefHeight="98.99999237060547" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите, пункт для удаления:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ListView fx:id="listViewChooseToDeleteSecondPaneChooseToDeleteSecond" prefHeight="320.0" prefWidth="200.0" stylesheets="@../../../CSS/ListViewSelection.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+            <Pane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #3D4956;" GridPane.rowIndex="1" />
+            <AnchorPane layoutX="10.0" layoutY="122.0" prefHeight="369.0" prefWidth="600.0" style="-fx-background-color: #444E58;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="buttonConfirmDeletePaneChooseToDeleteSecond" layoutX="499.0" layoutY="294.0" mnemonicParsing="false" onAction="#clickButtonConfirmDeletePaneChooseToDeleteSecond" prefHeight="30.0" prefWidth="195.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="Удалить" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonBackToOperationsPaneChooseToDeleteSecond" layoutX="356.0" layoutY="317.0" mnemonicParsing="false" onAction="#clickButtonBackToOperationsPaneChooseToDeleteSecond" prefHeight="30.0" prefWidth="158.0" stylesheets="@../../../CSS/ButtonAddRaspStyle.css" text="← Назад к операциям" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="280.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="paneEmpty" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox alignment="CENTER" prefHeight="307.0" prefWidth="420.0" style="-fx-background-color: #444E58;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать!">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

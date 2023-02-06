@@ -1,0 +1,37 @@
+.list-view {
+    -fx-background-color: #444E58;
+}
+
+.list-view .list-cell:even, .list-view .list-cell:odd{
+    -fx-background-color: #3D4956;
+    -fx-text-fill: #FFFFFF;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #505C68;
+    -fx-background-radius: 20;
+    -fx-text-fill: #FFFFFF;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #303D4C;
+    -fx-background-insets: 3, 3, 3;
+    -fx-background-radius: 5;;
+}
+
+
+
+.list-view .scroll-bar:vertical {
+    -fx-background-color:#3D4956;
+}
+
+.list-view .increment-button ,.list-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+}
+
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color:#708090;
+    -fx-background-insets: 3, 3, 3;
+    -fx-background-radius: 5;
+}
